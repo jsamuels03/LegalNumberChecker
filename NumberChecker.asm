@@ -10,3 +10,11 @@
 main:
     # Read and validate L, M, N
     li $t1, 0                #count
+
+read_input:
+    li $v0, 4                 # printing string
+    la $a0, prompt_u           
+    syscall
+
+    li $v0, 5                 # read int
+    syscall
