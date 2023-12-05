@@ -18,3 +18,9 @@ read_input:
 
     li $v0, 5                 # read int
     syscall
+
+blt $v0, 21, invalid_input  # less than or equal to 20
+    sw $v0, numbers($t1)      # Store number in t1
+
+    addi $t1, $t1, 4          # next position in array
+    bne $t1, 12, read_input   # 3 integers
