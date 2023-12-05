@@ -45,3 +45,9 @@ blt $v0, 21, invalid_input  # less than or equal to 20
 # Exit
     li $v0, 10                
     syscall
+
+invalid_input:
+    li $v0, 4                
+    la $a0, error_msg           # load error message 
+    syscall
+    j read_input              # read input
