@@ -3,3 +3,10 @@
     error_msg:  .asciiz "Illegal Number!\n"
     gcdNote: .asciiz "The GCD of L, M, and N is: "
     num: .space 12 # space for three integers
+
+.text
+    .globl main
+
+main:
+    # Read and validate L, M, N
+    li $t1, 0                #count
