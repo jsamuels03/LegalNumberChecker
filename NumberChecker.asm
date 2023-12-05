@@ -51,3 +51,7 @@ invalid_input:
     la $a0, error_msg           # load error message 
     syscall
     j read_input              # read input
+
+gcd:
+    move $t0, $a0             
+    move $t1, $a1             # a1 to t1
