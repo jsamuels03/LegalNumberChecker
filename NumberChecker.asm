@@ -41,3 +41,7 @@ blt $v0, 21, invalid_input  # less than or equal to 20
     li $v0, 1                 
     move $a0, $v0             #move to $a0
     syscall
+
+# Exit
+    li $v0, 10                
+    syscall
