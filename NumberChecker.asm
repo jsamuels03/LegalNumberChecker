@@ -32,3 +32,12 @@ blt $v0, 21, invalid_input  # less than or equal to 20
     move $a0, $v0             # Move to $a0
     lw $a1, num + 8       # N
     jal gcd                   # Call GCD function 
+
+ # Print GCD
+    li $v0, 4                
+    la $a0, gcdNote            # load gcd
+    syscall
+
+    li $v0, 1                 
+    move $a0, $v0             #move to $a0
+    syscall
