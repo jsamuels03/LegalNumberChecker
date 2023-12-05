@@ -63,3 +63,7 @@ gcd_loop:
     div $t2, $t1             # Divide t2 by t1
     mfhi $t1                 # Move remainder to t1
     j gcd_loop
+
+gcd_end:
+    move $v0, $t0            # Move GCD to v0
+    jr $ra
