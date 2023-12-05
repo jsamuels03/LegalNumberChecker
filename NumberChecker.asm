@@ -55,3 +55,11 @@ invalid_input:
 gcd:
     move $t0, $a0             
     move $t1, $a1             # a1 to t1
+
+gcd_loop:
+    beq $t1, $zero, gcd_end   #gcd loop
+    move $t2, $t0             
+    move $t0, $t1             
+    div $t2, $t1             # Divide t2 by t1
+    mfhi $t1                 # Move remainder to t1
+    j gcd_loop
